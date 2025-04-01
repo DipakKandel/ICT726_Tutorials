@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 2</title>
+  </head>
+  <body>
+    <form name="registration" onsubmit="return validateform()">
+      Username: <input type="text" name="username" /><br />
+      Password: <input type="password" name="password" /><br />
+      <input type="submit" value="register" />
+    </form>
+    <script>
+      function validateform() {
+        let username = document.forms["registration"]["username"].value;
+        let password = document.forms["registration"]["password"].value;
+
+        if (username == null || username.trim() == "") {
+          alert("Username cannot be empty");
+          return false;
+        }
+        if (password.length < 8) {
+          alert("Password must be at least 8 characters long");
+          return false;
+        }
+        alert("Validation passed");
+      }
+    </script>
+  </body>
+</html>
