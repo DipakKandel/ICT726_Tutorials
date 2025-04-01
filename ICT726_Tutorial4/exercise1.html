@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 1</title>
+  </head>
+  <body>
+    <button onclick="createParagraph()">One Heading and few paragraphs</button>
+    <script>
+      function createParagraph() {
+        let heading = document.createTextNode("new heading");
+        let text1 = document.createTextNode("Paragraph 1");
+        let text2 = document.createTextNode("Paragraph 2");
+
+        let h = document.createElement("h1");
+        let p1 = document.createElement("p");
+        let p2 = document.createElement("p");
+
+        h.appendChild(heading);
+        p1.appendChild(text1);
+        p2.appendChild(text2);
+
+        let body = document.body;
+        body.appendChild(h);
+        body.appendChild(p1);
+        body.appendChild(p2);
+      }
+    </script>
+  </body>
+</html>
